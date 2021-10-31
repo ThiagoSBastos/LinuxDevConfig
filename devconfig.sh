@@ -10,7 +10,7 @@ if [[ ! -z $DNF_CMD ]]; then
     dnf groupinstall "Development Tools" "Development Libraries"   
 elif [[ ! -z $APT_CMD ]]; then
     echo "[APT BASED INSTALL"];
-    apt install build-essential git cmake clang
+    apt install build-essential git cmake clang clangd-12
 else
     echo "[ERROR] Package manager not supported.";
     exit 1;
