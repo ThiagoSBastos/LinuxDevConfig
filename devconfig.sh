@@ -8,7 +8,8 @@ APT_CMD=$(which apt)
 if [[ ! -z $DNF_CMD ]]; then
     echo "[DNF BASED INSTALL]";
     dnf groupinstall "Development Tools" "Development Libraries"
-    dnf install clang-tools-extra nodejs neovim fd-find ripgrep -y   
+    dnf install clang-tools-extra nodejs neovim fd-find ripgrep golang -y
+    mkdir -p $HOME/go
 elif [[ ! -z $APT_CMD ]]; then
     echo "[APT BASED INSTALL"];
     apt install build-essential git cmake clang clangd-12 nodejs neovim -y
